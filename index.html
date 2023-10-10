@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Make it rain!
+        </title>
+        <style>
+            body {
+                text-align: center;
+            }
+
+            #a{
+                padding:10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Random Color Generator</h1>
+        
+        <button id="a">Voila!</button>
+
+        <script>
+
+            function rand_col(){
+                var x = Math.floor(Math.random() * 256);
+                var y = Math.floor(Math.random() * 256);
+                var z = Math.floor(Math.random() * 256);
+                var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+                return bgColor;
+            }
+           
+            function button_color(){
+                var random=rand_col();
+                var b=document.getElementById("a");
+                b.style.backgroundColor=random;
+            }
+            
+
+            document.getElementById("a").addEventListener("click",button_color);
+        </script>
+
+        
+    </body>
+</html>
